@@ -1,0 +1,122 @@
+.header-top {
+    // text-align: center;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(226, 250, 242);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+
+    .menu-header {
+        background-color: rgb(226, 250, 242);        
+
+        .ant-menu-item {
+            border-radius: 25px; /* Đặt border-radius để tạo border tròn */        
+            // margin: 0 4px; /* Khoảng cách giữa các item (tùy chọn) */
+            // padding: 0 16px; /* Đảm bảo có đủ không gian cho border-radius */
+            // line-height: 1.5; /* Điều chỉnh line-height cho cân đối */
+        }
+
+        .ant-menu-item {
+            a {
+                text-decoration: none; /* Loại bỏ gạch chân */
+            }        
+        }
+
+        .ant-menu-item-selected {
+            background-color: orange; /* Màu nền cho item được chọn */
+            color: rgb(255, 255, 255); /* Màu chữ cho item được chọn */
+            border-radius: 25px; /* Đảm bảo border-radius giữ nguyên khi chọn */
+            text-decoration: none; /* Loại bỏ gạch chân */
+        }
+    }
+
+    .col-top {
+        text-align: center;
+    }
+}
+
+.navbar-custom {
+    font-size: 3vh;
+    
+
+    .nav-link {
+        
+        margin-right: 1vh; /* Khoảng cách giữa các liên kết */
+        transition: background-color 0.3s, border 0.3s; /* Hiệu ứng chuyển màu mượt mà */
+        border-radius: 30px;
+        padding: 9px 15px; /* Padding để làm cho liên kết cao hơn */
+        line-height: 1.4; /* Căn chỉnh văn bản trong liên kết */
+        color: black;
+
+        &.active {
+            border: 2px solid orange; /* Đặt border khi liên kết được chọn */
+            border-radius: 30px; /* Đặt border-radius để tạo border tròn */
+            background-color: orange; /* Màu nền khi liên kết được chọn */
+            color: white; /* Màu chữ khi liên kết được chọn */
+            text-decoration: none; /* Loại bỏ gạch chân */
+        }
+    }
+}
+
+.txt-menu {
+    cursor: pointer;
+    color: rgb(98, 215, 228);
+    font-size: 2vh;
+    margin: 0;
+}
+.active-txt-menu {
+    color: red;
+}
+
+/* CSS cho Navbar hiển thị ngang mà không cần cuộn */
+.navbar-custom {
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Đặt các liên kết trên cùng một hàng */
+        align-items: center; /* Căn giữa các liên kết theo chiều dọc */
+        overflow: hidden; /* Ẩn phần dư thừa */
+        white-space: nowrap; /* Ngăn các liên kết xuống hàng */
+    }
+
+    .nav-link {
+        flex: 1 1 auto; /* Đảm bảo các liên kết có thể mở rộng */
+        text-align: center; /* Căn giữa văn bản */
+    }
+}
+
+/* CSS cho phần tử icon khi màn hình nhỏ */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vh;
+}
+
+@media (max-width: 768px) {
+    .navbar-custom .nav-links {
+        flex-direction: row; /* Đảm bảo các liên kết nằm ngang trên màn hình nhỏ */
+        overflow-x: auto; /* Cho phép cuộn ngang nếu cần */
+        -webkit-overflow-scrolling: touch; /* Thêm hiệu ứng cuộn mượt trên iOS */
+    }
+
+    .icon-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }   
+
+    .icon-wrapper {
+        width: 80vh;
+    }
+}
+
