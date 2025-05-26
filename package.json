@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.3",
     "ckeditor5": "^43.2.0",
     "ckeditor5-premium-features": "^43.2.0",
+    "express": "^4.21.2",
     "fe-vite": "file:",
     "html-react-parser": "^5.1.17",
     "moment": "^2.30.1",
